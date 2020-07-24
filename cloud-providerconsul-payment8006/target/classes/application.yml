@@ -1,0 +1,36 @@
+# 我win10ip地址为192.168.43.200 虚拟机linux ip为192.168.43.50
+server:
+  port: 8006
+
+spring:
+  application:
+    name: consul-provider-payment
+  cloud:
+    consul:
+      host: 192.168.43.50   #consul的ip地址  也就是虚拟机的ip
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        prefer-ip-address: true
+        ip-address: 192.168.43.200  # 这里需要配置虚拟机docker的consul内部访问外部实体机的地址
+        port: 8006    #payment的端口号
+
+
+
+
+
+
+#server:
+#  port: 8006
+#spring:
+#  application:
+#    name: consul-provider-payment
+#  cloud:
+#    consul:
+#      host: 192.168.43.50
+#      port: 8500
+#      discovery:
+#        service-name: ${spring.application.name} # 服务发现配置
+#
+
+

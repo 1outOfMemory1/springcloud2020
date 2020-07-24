@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>tech.haonan</groupId>
+  <artifactId>cloud2020</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.2.5.RELEASE</version>
+  </parent>
+
+  <modules>
+    <module>cloud-provider-payment8001</module>
+    <module>cloud-consumer-order80</module>
+      <module>cloud-api-commons</module>
+    <module>cloud-eureka-server7001</module>
+      <module>cloud-eureka-server7002</module>
+      <module>cloud-provider-payment8002</module>
+      <module>cloud-provider-payment8004</module>
+    <module>cloud-consumerzk-order80</module>
+      <module>cloud-providerconsul-payment8006</module>
+    <module>cloud-consumerconsul-order80</module>
+    <module>cloud-consumer-openfeign-order80</module>
+  </modules>
+
+  <name>Maven</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://maven.apache.org/</url>
+  <inceptionYear>2001</inceptionYear>
+
+  <distributionManagement>
+    <site>
+      <id>website</id>
+      <url>scp://webhost.company.com/www/website</url>
+    </site>
+  </distributionManagement>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+    <junit.version>4.13</junit.version>
+    <log4j.version>2.13.2</log4j.version>
+    <lombok.version>1.18.12</lombok.version>
+    <mysql.version>8.0.20</mysql.version>
+    <druid.version>1.1.22</druid.version>
+    <mybatis.spring.boot.version>2.1.2</mybatis.spring.boot.version>
+    <spring.boot.version>2.2.5.RELEASE</spring.boot.version>
+    <spring.cloud.version>Hoxton.SR4</spring.cloud.version>
+    <spring.cloud.alibaba.dependencies.version>2.2.1.RELEASE</spring.cloud.alibaba.dependencies.version>
+    <spring.cloud.starter.netflix.eureka.server.version>2.2.2.RELEASE</spring.cloud.starter.netflix.eureka.server.version>
+    <spring.cloud.starter.netflix.eureka.client.version>2.2.2.RELEASE</spring.cloud.starter.netflix.eureka.client.version>
+    <spring.cloud.starter.zookeeper.discovery.version>2.2.1.RELEASE</spring.cloud.starter.zookeeper.discovery.version>
+    <spring.cloud.starter.consul.discovery.version>2.2.2.RELEASE</spring.cloud.starter.consul.discovery.version>
+    <spring.cloud.starter.openfeign.version>2.2.2.RELEASE</spring.cloud.starter.openfeign.version>
+  </properties>
+
+  <!--子模块继承之后，提供作用：锁定版本+子Modlue不用写groupId和version-->
+  <dependencyManagement>
+    <dependencies>
+
+      <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-dependencies -->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring.cloud.version}</version>
+        <type>pom</type>
+        <scope>runtime</scope>
+      </dependency>
+
+
+      <!-- https://mvnrepository.com/artifact/com.alibaba.cloud/spring-cloud-alibaba-dependencies -->
+      <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+        <version>${spring.cloud.alibaba.dependencies.version}</version>
+        <type>pom</type>
+      </dependency>
+
+
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+        <version>${spring.boot.version}</version>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter -->
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter</artifactId>
+        <version>${spring.boot.version}</version>
+      </dependency>
+
+
+
+
+
+      <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+      <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>${mysql.version}</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid</artifactId>
+        <version>${druid.version}</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter -->
+      <dependency>
+        <groupId>org.mybatis.spring.boot</groupId>
+        <artifactId>mybatis-spring-boot-starter</artifactId>
+        <version>${mybatis.spring.boot.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <optional>true</optional>
+        <version>${lombok.version}</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-devtools -->
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-devtools</artifactId>
+        <version>${spring.boot.version}</version>
+      </dependency>
+
+
+      <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client -->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+        <version>${spring.cloud.starter.netflix.eureka.server.version}</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-server -->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        <version>${spring.cloud.starter.netflix.eureka.client.version}</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-zookeeper-discovery -->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>
+        <version>${spring.cloud.starter.zookeeper.discovery.version}</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-consul-discovery -->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-consul-discovery</artifactId>
+        <version>${spring.cloud.starter.consul.discovery.version}</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign -->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-openfeign</artifactId>
+        <version>${spring.cloud.starter.openfeign.version}</version>
+      </dependency>
+
+
+    </dependencies>
+  </dependencyManagement>
+
+
+  <build>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.7.1</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+</project>
