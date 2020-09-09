@@ -2,13 +2,12 @@ package tech.haonan;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
-
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
-@EnableEurekaServer
-public class EurekaMain7002 {
+@EnableEurekaClient
+public class PaymentHystrixMain8001 {
     public static void main(String[] args) {
-        SpringApplication.run(EurekaMain7002.class,args);
+        SpringApplication.run(PaymentHystrixMain8001.class,args);
     }
 }

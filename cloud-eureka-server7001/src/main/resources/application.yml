@@ -6,8 +6,10 @@ eureka:
   client:
     register-with-eureka: false  # 不向注册中心注册自己
     fetch-registry: false #false 表示自己就是注册中心 ，不需要检索服务
+#    service-url:
+#      defaultZone: http://eureka7002.com:7002/eureka/  #这里和7002注册中心相互注册 相互守望
     service-url:
-      defaultZone: http://eureka7002.com:7002/eureka/
+      defaultZone: http://eureka7001.com:7001/eureka/  #只有 7001自己一个注册中心了 不再进行相互守望
   server:
     enable-self-preservation: false
     eviction-interval-timer-in-ms: 2000
