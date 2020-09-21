@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: cloud-payment-service
+    name: cloud-provider-hystrix-payment8001 #记得改这里的名字  否则会重复啊
 
 eureka:
   client:

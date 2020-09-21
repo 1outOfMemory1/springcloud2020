@@ -1,0 +1,11 @@
+server:
+  port: 80
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+
+ribbon:
+  ReadTimeout: 4000   #需要设置超时时间 因为80端口调用 8080端口要 用只至少三秒时间 会出现报错  这里给4秒没有问题

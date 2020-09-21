@@ -27,6 +27,7 @@
     <module>cloud-consumerconsul-order80</module>
     <module>cloud-consumer-openfeign-order80</module>
       <module>cloud-provider-hystrix-payment8001</module>
+      <module>cloud-consumer-feign-hystrix-order80</module>
   </modules>
 
   <name>Maven</name>
@@ -59,6 +60,8 @@
     <spring.cloud.starter.zookeeper.discovery.version>2.2.1.RELEASE</spring.cloud.starter.zookeeper.discovery.version>
     <spring.cloud.starter.consul.discovery.version>2.2.2.RELEASE</spring.cloud.starter.consul.discovery.version>
     <spring.cloud.starter.openfeign.version>2.2.2.RELEASE</spring.cloud.starter.openfeign.version>
+    <spring.cloud.starter.netflix.hystrix>2.2.5.RELEASE</spring.cloud.starter.netflix.hystrix>
+
   </properties>
 
   <!--子模块继承之后，提供作用：锁定版本+子Modlue不用写groupId和version-->
@@ -170,6 +173,14 @@
         <artifactId>spring-cloud-starter-openfeign</artifactId>
         <version>${spring.cloud.starter.openfeign.version}</version>
       </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-hystrix -->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        <version>${spring.cloud.starter.netflix.hystrix}</version>
+      </dependency>
+
 
 
     </dependencies>

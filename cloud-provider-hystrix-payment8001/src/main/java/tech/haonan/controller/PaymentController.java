@@ -17,6 +17,12 @@ public class PaymentController {
     @Value("${server.port}")
     private String serverPort;
 
+
+    /**
+     *
+     * @param id  id是用来凑数的没用
+     * @return 返回一个字符串
+     */
     @GetMapping("payment/hystrix/ok/{id}")
     public String paymentInfo_OK(@PathVariable("id") Integer id){
         String result = paymentService.paymentInfo_OK(id);
