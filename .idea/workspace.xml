@@ -9,29 +9,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9b95bfd-ff2f-49cf-96be-7cf231bed895" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cloud-consumer-feign-hystrix-order80/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-consumer-feign-hystrix-order80/src/main/java/tech/haonan/OrderHystrixMain80.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-consumer-feign-hystrix-order80/src/main/java/tech/haonan/controller/OrderHystrixController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-consumer-feign-hystrix-order80/src/main/java/tech/haonan/service/PaymentHystrixService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-consumer-feign-hystrix-order80/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-consumer-openfeign-order80/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-consumer-order80/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-consumerconsul-order80/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-consumerzk-order80/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-eureka-server7002/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-provider-hystrix-payment8001/src/main/java/tech/haonan/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-hystrix-payment8001/src/main/java/tech/haonan/controller/PaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-provider-hystrix-payment8001/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-hystrix-payment8001/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-provider-hystrix-payment8001/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-hystrix-payment8001/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/target/classes/mapper/PaymentMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8002/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8002/target/classes/mapper/PaymentMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8004/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-providerconsul-payment8006/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-hystrix-payment8001/src/main/java/tech/haonan/PaymentHystrixMain8001.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-hystrix-payment8001/src/main/java/tech/haonan/PaymentHystrixMain8001.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-hystrix-payment8001/src/main/java/tech/haonan/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-hystrix-payment8001/src/main/java/tech/haonan/service/PaymentService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +100,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.OrderHystrixMain80">
+  <component name="RunManager" selected="Spring Boot.PaymentHystrixMain8001">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -222,9 +202,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.OrderHystrixMain80" />
         <item itemvalue="Spring Boot.PaymentHystrixMain8001" />
         <item itemvalue="Spring Boot.EurekaMain7001" />
+        <item itemvalue="Spring Boot.OrderHystrixMain80" />
         <item itemvalue="Spring Boot.PaymentMain8004" />
         <item itemvalue="Spring Boot.OrderFeignMain80" />
       </list>
@@ -283,7 +263,7 @@
       <workItem from="1599647575547" duration="1316000" />
       <workItem from="1599648908651" duration="7351000" />
       <workItem from="1599662889932" duration="1725000" />
-      <workItem from="1600685383541" duration="4825000" />
+      <workItem from="1600685383541" duration="9084000" />
     </task>
     <servers />
   </component>
@@ -370,38 +350,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1599649125600" />
-    <state width="1019" height="241" key="GridCell.Tab.0.bottom" timestamp="1600692493538">
+    <state width="1019" height="275" key="GridCell.Tab.0.bottom" timestamp="1600702507432">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1019" height="241" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600692493538" />
-    <state width="1019" height="241" key="GridCell.Tab.0.center" timestamp="1600692493538">
+    <state width="1019" height="275" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600702507432" />
+    <state width="1019" height="275" key="GridCell.Tab.0.center" timestamp="1600702507432">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1019" height="241" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600692493538" />
-    <state width="1019" height="241" key="GridCell.Tab.0.left" timestamp="1600692493538">
+    <state width="1019" height="275" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600702507432" />
+    <state width="1019" height="275" key="GridCell.Tab.0.left" timestamp="1600702507432">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1019" height="241" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600692493538" />
-    <state width="1019" height="241" key="GridCell.Tab.0.right" timestamp="1600692493538">
+    <state width="1019" height="275" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600702507432" />
+    <state width="1019" height="275" key="GridCell.Tab.0.right" timestamp="1600702507432">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1019" height="241" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600692493538" />
-    <state width="1019" height="241" key="GridCell.Tab.1.bottom" timestamp="1600692493538">
+    <state width="1019" height="275" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600702507432" />
+    <state width="1019" height="275" key="GridCell.Tab.1.bottom" timestamp="1600702507433">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1019" height="241" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600692493538" />
-    <state width="1019" height="241" key="GridCell.Tab.1.center" timestamp="1600692493538">
+    <state width="1019" height="275" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600702507433" />
+    <state width="1019" height="275" key="GridCell.Tab.1.center" timestamp="1600702507432">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1019" height="241" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1600692493538" />
-    <state width="1019" height="241" key="GridCell.Tab.1.left" timestamp="1600692493538">
+    <state width="1019" height="275" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1600702507432" />
+    <state width="1019" height="275" key="GridCell.Tab.1.left" timestamp="1600702507432">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1019" height="241" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1600692493538" />
-    <state width="1019" height="241" key="GridCell.Tab.1.right" timestamp="1600692493538">
+    <state width="1019" height="275" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1600702507432" />
+    <state width="1019" height="275" key="GridCell.Tab.1.right" timestamp="1600702507432">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1019" height="241" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1600692493538" />
+    <state width="1019" height="275" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1600702507432" />
     <state x="442" y="0" key="SettingsEditor" timestamp="1599649039997">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -468,11 +448,6 @@
           <url>jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-loadbalancer/2.3.0/ribbon-loadbalancer-2.3.0.jar!/com/netflix/loadbalancer/RoundRobinRule.class</url>
           <line>32</line>
           <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cloud-provider-hystrix-payment8001/src/main/java/tech/haonan/PaymentHystrixMain8001.java</url>
-          <line>10</line>
-          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
