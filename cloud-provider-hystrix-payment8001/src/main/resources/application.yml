@@ -12,4 +12,8 @@ eureka:
     service-url:
       defaultZone : http://localhost:7001/eureka  #只有一个注册中心
 #      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka  #两个注册中心
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "hystrix.stream"
