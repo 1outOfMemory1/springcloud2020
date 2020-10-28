@@ -17,6 +17,7 @@
         <module name="cloud-consumer-feign-hystrix-order80" />
         <module name="cloud-consumerzk-order80" />
         <module name="cloud-consumerconsul-order80" />
+        <module name="cloud-consumer-hystrix-dashboard9001" />
         <module name="cloud-feign-order80" />
         <module name="cloud-consumer-openfeign-order80" />
         <module name="cloud-provider-hystrix-payment8001" />
@@ -33,6 +34,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="cloud-api-commons" options="-parameters" />
       <module name="cloud-consumer-feign-hystrix-order80" options="-parameters" />
+      <module name="cloud-consumer-hystrix-dashboard9001" options="-parameters" />
       <module name="cloud-consumer-openfeign-order80" options="-parameters" />
       <module name="cloud-consumer-order80" options="-parameters" />
       <module name="cloud-consumerconsul-order80" options="-parameters" />
