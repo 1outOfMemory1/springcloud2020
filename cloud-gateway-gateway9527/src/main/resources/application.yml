@@ -1,0 +1,25 @@
+server:
+  port: 9527
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      routes:
+        # 这里是配置 将8001 的服务不主动暴露出来  通过网关来访问
+        - id: payment_routh1
+          uri: http://localhost:8001
+          predicates:
+            - Path=/payment/getById/**
+        - id: payment_routh2
+          uri: http://localhost:8001
+          predicates:
+            - Path=/payment/lb/**
+eureka:
+  instance:
+    hostname: cloud-gateway-service
+  client:
+    service-url:
+      register-with-eureka: true
+      fetch-registry: true
+      defaultZone: http://eureka7001.com:7001/eureka

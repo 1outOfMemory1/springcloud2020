@@ -1,5 +1,6 @@
 server:
   port: 9001
+# 用于接收8001 的数据 不添加以下行   不行
 hystrix:
   dashboard:
     proxy-stream-allow-list: "*"
