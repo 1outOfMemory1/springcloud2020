@@ -14,6 +14,13 @@ spring:
           uri: lb://CLOUD-PAYMENT-SERVICE # lb 是load balance的意思 8001 端口 和8002 端口的微服务都提供一样的服务
           predicates:
             - Path=/payment/getById/**
+            #当前时间和下边这个时间做对比 如果晚于这个时间 则可以访问 反正拒绝
+#            - After=2010-10-30T18:25:10.272410800+08:00[Asia/Shanghai]
+#            - Before=2010-10-30T18:25:10.272410800+08:00[Asia/Shanghai]
+#            - Between=2010-10-30T18:25:10.272410800+08:00[Asia/Shanghai]，2030-10-30T18:25:10.272410800+08:00[Asia/Shanghai]
+            # 需要提交cookie中包含 username=xxxx   curl http://localhost:9527/payment/getById/1 --cookie "username=xxxx"
+#            - Cookie=username,xxxx
+            - Header=X-Request-Id,\d+ # 要求请求头中有 X-Request-Id 属性并且值为整数的正则表达式
         - id: payment_routh2
           uri: lb://CLOUD-PAYMENT-SERVICE
           predicates:
