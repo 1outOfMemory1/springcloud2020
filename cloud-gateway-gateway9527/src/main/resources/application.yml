@@ -3,18 +3,21 @@ server:
 spring:
   application:
     name: cloud-gateway
-#  cloud:
-#    gateway:
-#      routes:
-#        # 这里是配置 将8001 的服务不主动暴露出来  通过网关来访问
-#        - id: payment_routh1
-#          uri: http://localhost:8001
-#          predicates:
-#            - Path=/payment/getById/**
-#        - id: payment_routh2
-#          uri: http://localhost:8001
-#          predicates:
-#            - Path=/payment/lb/**
+  cloud:
+    gateway:
+      discovery:  # 开启动态路由
+        locator:
+          enabled: true
+      routes:
+        # 这里是配置 将8001 的服务不主动暴露出来  通过网关来访问
+        - id: payment_routh1
+          uri: lb://CLOUD-PAYMENT-SERVICE # lb 是load balance的意思 8001 端口 和8002 端口的微服务都提供一样的服务
+          predicates:
+            - Path=/payment/getById/**
+        - id: payment_routh2
+          uri: lb://CLOUD-PAYMENT-SERVICE
+          predicates:
+            - Path=/payment/lb/**
 eureka:
   instance:
     hostname: cloud-gateway-service
