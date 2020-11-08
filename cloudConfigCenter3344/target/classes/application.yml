@@ -7,10 +7,13 @@ spring:
     config:
       server:
         git:
-          uri: git@github.com:99611400/springCloud-Config.git
+          uri: git@github.com:99611400/springCloud-Config.git # 注意这里使用ssh连接
           search-paths:
             - springCloud-Config
-      label: main
+            # 举个例子 浏览器输入  http://config-3344.com:3344/main/config-dev.yml
+            # configserver会帮你访问
+            # https://github.com/99611400/springCloud-Config/blob/main/config-dev.yml
+      label: main  # 如果是之前的 那就改成master 指明那个分支
 eureka:
   instance:
     hostname: cloud-config-center

@@ -1,0 +1,25 @@
+server:
+  port: 3355
+spring:
+  application:
+    name: config-client-3355
+  cloud:
+    config:
+      label: main  # 分支的名字
+      name: config # 配置文件的名字
+      profile: dev # 读取后缀名称  上边三个综合起来 就是 main/config-dev.yml
+      uri: http://localhost:3344 # 配置中心的地址 也就是config server所在的端口
+      # 不直接去找github 只是通过3344来找  3344 相当于本地的一个中转站
+eureka:  # 将服务注册到 eureka中去
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+
+# 暴露监控端点
+management:
+  endpoint:
+    web:
+      exposure:
+        include:refresh
+  endpoints:
+    enabled-by-default: true

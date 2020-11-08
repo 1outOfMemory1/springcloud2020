@@ -24,6 +24,7 @@
         <module name="cloud-consumer-openfeign-order80" />
         <module name="cloud-provider-hystrix-payment8001" />
         <module name="cloud-consumer-order80" />
+        <module name="cloud-config-client-3355" />
         <module name="cloud-consumer-feign-order80" />
       </profile>
     </annotationProcessing>
@@ -35,6 +36,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="cloud-api-commons" options="-parameters" />
+      <module name="cloud-config-client-3355" options="-parameters" />
       <module name="cloud-consumer-feign-hystrix-order80" options="-parameters" />
       <module name="cloud-consumer-hystrix-dashboard9001" options="-parameters" />
       <module name="cloud-consumer-openfeign-order80" options="-parameters" />
