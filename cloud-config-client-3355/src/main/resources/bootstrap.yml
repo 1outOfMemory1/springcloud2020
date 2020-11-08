@@ -15,11 +15,27 @@ eureka:  # 将服务注册到 eureka中去
     service-url:
       defaultZone: http://localhost:7001/eureka
 
-# 暴露监控端点
+# 暴露refresh监控端点
 management:
-  endpoint:
+  endpoints:
     web:
       exposure:
-        include:refresh
-  endpoints:
-    enabled-by-default: true
+        # 注意下边两种都不行
+#        include:*
+#        include: *
+        # 注意下边两种可以 建议第二种
+#        include: "*"
+        include: refresh # 注意这里一定得指名是 refresh
+#         这个时候访问 http://localhost:3355/actuator 就有如下信息
+#        {
+#              "_links": {
+#                  "self": {
+#                      "href": "http://localhost:3355/actuator",
+#                      "templated": false
+#                  },
+#                  "refresh": {
+#                      "href": "http://localhost:3355/actuator/refresh",
+#                      "templated": false
+#                  }
+#            }
+#        }
